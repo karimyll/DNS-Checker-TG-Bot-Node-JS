@@ -1,7 +1,6 @@
 const {Telegraf,Markup,Input} = require("telegraf");
-const apiKey = '6282930238:AAFCirQMNEdImtUhf6WDH9lQ-HK4g596epE';
 
-const Bot = new Telegraf(apiKey, {
+const Bot = new Telegraf(process.env.BOT_TOKEN, {
     handlerTimeout: 2000,
 });
 
@@ -17,7 +16,7 @@ Bot.command('dns', (ctx) => {
         ctx.reply("Göndərilir...")
         const apiUrl = "https://api.api-ninjas.com/v1/dnslookup?domain=" + domain;
         const headers = {
-            "X-Api-Key": "hbrXh0lQ6sFxuMKOuM8OHQ==T2oxpCCnPBJPFH9A"
+            "X-Api-Key": process.env.X_API_KEY
         };
         fetch(apiUrl, {
             method: 'GET',
