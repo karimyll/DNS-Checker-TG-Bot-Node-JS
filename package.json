@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "telegraf": "^4.11.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+
+}
